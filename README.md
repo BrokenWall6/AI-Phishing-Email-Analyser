@@ -8,6 +8,15 @@ The main design rule: **rules decide the verdict, the LLM only explains it.** Th
 comes from deterministic checks, so the same email always gets the same result and the
 model can't invent a verdict.
 
+![Analysis of a phishing email: verdict, score breakdown by component and findings](docs/screenshots/analyze.png)
+
+<details>
+<summary>Accuracy view: batch testing against labelled emails</summary>
+
+![Accuracy view with confusion matrix and metrics](docs/screenshots/accuracy.png)
+
+</details>
+
 ## How it works
 
 ```mermaid
