@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Phishing Email Analyzer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css?v=2026-10-25">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar-inner">
+        <div class="brand">
+            <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 6.5 12 13l9-6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="18.5" cy="17.5" r="3.6" fill="var(--paper)" stroke="currentColor" stroke-width="1.8"/>
+                <path d="m21 20 1.8 1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <span>Phishing Email Analyzer</span>
+        </div>
+
+        <nav class="views" aria-label="Views">
+            <button class="view-tab" data-view="analyze" aria-current="page">Analyze</button>
+            <button class="view-tab" data-view="accuracy">Accuracy</button>
+        </nav>
+
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch colour theme">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z" fill="currentColor"/></svg>
+        </button>
+    </div>
+</header>
+
+<main class="page">
+
+    <!-- ============ Analyze view ============ -->
+    <section id="view-analyze" class="view">
+
+        <form id="dropzone" class="dropzone" aria-label="Analyze an email">
+            <input type="file" id="fileInput" accept=".eml,message/rfc822" hidden>
+            <div class="dropzone-text">
+                <p class="dropzone-title" id="dropTitle">Drop an .eml file here</p>
+                <p class="dropzone-sub">or <button type="button" class="link-button" id="chooseFile">choose a file</button>. The email is analysed on this computer only.</p>
+            </div>
+            <div class="dropzone-actions">
+                <label class="check">
+                    <input type="checkbox" id="aiToggle" checked>
+                    <span>Write AI report <span class="muted">(slower)</span></span>
+                </label>
+                <button type="submit" class="btn btn-primary" id="analyzeBtn" disabled>Analyze email</button>
+            </div>
+        </form>
+
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+
+        <div id="report"></div>
+
+    </section>
+
+    <!-- ============ Accuracy view ============ -->
+    <section id="view-accuracy" class="view" hidden>
+        <div id="batch"></div>
+        <div id="accuracy"></div>
+    </section>
+
+</main>
+
+<div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+
+<script src="/static/dashboard.js?v=2026-10-25"></script>
+</body>
+</html>

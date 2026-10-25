@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+venv/
+.venv/
+
+# Secrets (copy backend/.env.example to backend/.env)
+.env
+
+# Uploaded emails and generated evaluation output
+backend/uploads/
+backend/*_output.txt
+backend/*_report.txt
+backend/*_results.csv
+
+# Datasets contain real emails and are not redistributed here.
+# See docs/evaluation.md for where to download them.
+datasets/
+
+# Local notes
+*.docx
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

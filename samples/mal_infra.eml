@@ -1,0 +1,20 @@
+From: alerts@secure-notice.xyz
+To: user@example.com
+Reply-To: verify-account@gmail.com
+Subject: Security Alert - Immediate Verification Required
+Date: Thu, 1 Oct 2026 12:00:00 +0200
+MIME-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+
+Dear User,
+
+We detected unusual activity associated with your account.
+
+To prevent temporary suspension, please verify your account immediately:
+
+http://secure-notice.xyz/verify/account/login
+
+Failure to complete verification within 24 hours may result in restricted access.
+
+Thank you,
+Security Notification Team

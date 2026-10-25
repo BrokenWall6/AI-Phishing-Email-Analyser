@@ -1,0 +1,21 @@
+From: "Microsoft Security Team" <security@example.com>
+To: user@example.com
+Reply-To: account-verification@gmail.com
+Subject: Urgent: Verify your Microsoft account
+Date: Thu, 1 Oct 2026 11:00:00 +0200
+MIME-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+
+Hello,
+
+We detected unusual activity on your Microsoft account.
+
+Your account may be temporarily restricted unless you verify your identity.
+
+Please verify your account immediately:
+
+http://example.com/verify-microsoft-account
+
+Failure to complete verification may result in account suspension.
+
+Microsoft Security Team
